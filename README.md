@@ -33,7 +33,7 @@ python train.py <data_dir> --save_dir <save_dir> --arch <arch> --learning_rate <
 - `<arch>` is the architecture of the neural network to be used for training (default is `vgg16`)
 - `<learning_rate>` is the learning rate to be used for training (default is `0.001`)
 - `<hidden_units>` is the number of hidden units in the classifier layer of the neural network (default is `4096`)
-- `<epochs>` is the number of epochs to train for (default is `5`)
+- `<epochs>` is the number of epochs to train for (default is `3`)
 - `--gpu` is an optional flag to train the model on GPU
 
 ## Using the Trained Model for Prediction
