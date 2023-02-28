@@ -16,15 +16,14 @@ import matplotlib.pyplot as plt
 from matplotlib.ticker import FormatStrFormatter
 import argparse
 
-arch = {"vgg16":25088,
-        "densenet121":1024}
+
 
 parser = argparse.ArgumentParser(
     description = 'Parser | train.py'
 )
 parser.add_argument('data_dir', action="store", default="./flowers/")
 parser.add_argument('--save_dir', action="store", default="./checkpoint.pth")
-parser.add_argument('--arch', action="store", default="vgg16")
+parser.add_argument('--arch', action="store", default="vgg16") #default is vgg16 but vgg13 also can be used
 parser.add_argument('--learning_rate', action="store", type=float,default=0.01)
 parser.add_argument('--hidden_units', action="store", dest="hidden_units", type=int, default=512)
 parser.add_argument('--epochs', action="store", default=3, type=int)
@@ -86,8 +85,12 @@ testloader = torch.utils.data.DataLoader(test_dataset, batch_size=32)
 dataloaders = {'train': trainloader, 'valid': validloader, 'test': testloader}
 
 
-# Load a pre-trained VGG16 model
-model = models.vgg16(pretrained=True)
+# allows either use vgg13 or vgg16
+if arch == 'vgg13':
+    model = models.vgg13(pretrained=True)
+else:
+    model = models.vgg16(pretrained=True)
+    
 
 # Freeze parameters so we don't backprop through them
 for param in model.parameters():
