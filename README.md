@@ -16,7 +16,7 @@ The project consists of two parts:
 To get started with this project, you should first clone this repository to your local machine:
 
 ```bash
-git clone https://github.com/<username>/flower-image-classifier.git
+git clone https://github.com/SaiKrishna-KK/Udacity_Image_Classifier-2.git
 ```
 Once you have cloned the repository, you will need to install the required Python packages:
 
