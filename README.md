@@ -4,7 +4,7 @@ Project code for Udacity's AI Programming with Python Nanodegree program 2023. I
 
 # Flower Image Classifier
 
-This is a project to train a neural network on the Oxford Flowers 102 dataset to classify images of flowers into their respective species.
+This is a project to train a neural network on the Oxford Flowers 102 dataset to classify images of flowers into their respective species. To get detail commprehension of the project please the `Image Classifier Project.ipynb.`
 
 The project consists of two parts:
 
@@ -50,4 +50,4 @@ python predict.py <input> <checkpoint> --top_k <top_k> --category_names <categor
 - `--gpu` is an optional flag to use GPU for prediction
 
 ## Acknowledgments
-This project is part of the Udacity Data Scientist Nanodegree Program. The Oxford Flowers 102 dataset is provided by the Visual Geometry Group at the University of Oxford.
+This project is part of the Udacity AI Programming with Python Nanodegree Program. The Oxford Flowers 102 dataset is provided by the Visual Geometry Group at the University of Oxford.
